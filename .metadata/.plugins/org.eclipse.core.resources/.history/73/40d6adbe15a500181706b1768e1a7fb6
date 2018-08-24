@@ -1,0 +1,18 @@
+package boj;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class q12101 {
+	static int n,k;
+	static int[] history = new int[11];
+	static int cnt = 0;
+	public static void main(String[] args) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		n = Integer.parseInt(st.nextToken());
+		k = Integer.parseInt(st.nextToken());
+	}
+}

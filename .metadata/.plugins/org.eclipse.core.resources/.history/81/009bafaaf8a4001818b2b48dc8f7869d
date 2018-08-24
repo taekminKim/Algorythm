@@ -1,0 +1,9 @@
+package swea;
+
+import java.io.IOException;
+
+public class q1204 {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		
+	}
+}

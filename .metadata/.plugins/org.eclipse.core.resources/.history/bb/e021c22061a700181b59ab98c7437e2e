@@ -1,0 +1,40 @@
+package boj;
+
+import java.util.Scanner;
+
+/*
+ * 하나씩 다돌아보자..
+ */
+public class q14501 {
+	static int T[];
+	static int P[];
+	static int n;
+	static int max;
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		n = sc.nextInt();
+		T = new int[16];
+		P = new int[16];
+		for (int i = 1; i <= n; i++) {
+			T[i] = sc.nextInt();
+			P[i] = sc.nextInt();
+		}
+		max = 0;
+		dfs(1, 0);
+		System.out.println(max);
+	}
+
+	public static int dfs(int day, int sum) {
+		if (day == n + 1) {
+			if (sum > max) {
+				max = sum;
+			}
+		}
+		if (day + T[day] <= n + 1)
+			dfs(day + T[day], sum + T[day]);
+		if (day + 1 <= n + 1)
+			dfs(day + 1, sum);
+	}
+}

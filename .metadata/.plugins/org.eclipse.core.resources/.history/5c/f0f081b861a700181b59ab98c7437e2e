@@ -1,0 +1,30 @@
+package boj;
+
+import java.util.Scanner;
+
+/*
+ * 하나씩 다돌아보자..
+ */
+public class q14501 {
+	static int cost[];
+	static int day[];
+	static int n;
+	static int max;
+	static int dp[];
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		n = sc.nextInt();
+		cost = new int[16];
+		day = new int[16];
+		dp = new int[16];
+		for (int i = 1; i <= n; i++) {
+			cost[i] = sc.nextInt();
+			day[i] = sc.nextInt();
+		}
+		for(int i=1; i<=n; i++){
+			
+		}
+	}
+
+}

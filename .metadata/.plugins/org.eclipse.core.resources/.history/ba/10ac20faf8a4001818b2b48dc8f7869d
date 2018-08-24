@@ -1,0 +1,17 @@
+package swea;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class q1204 {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		for(int tc = 0; tc<10; tc++){
+			
+			int score[] = new int[101];
+			int temp=0;
+			int max = 0;
+			
+		}
+	}
+}
