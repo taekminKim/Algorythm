@@ -1,0 +1,83 @@
+package boj;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class q7576 {
+	static int arr[][];
+	static int dx[] = {-1,0,1,0};
+	static int dy[] = {0,1,0,-1};
+	static int N;
+	static int M;
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		String str[] = br.readLine().split(" ");
+		N = Integer.parseInt(str[0]);
+		M = Integer.parseInt(str[1]);
+		arr = new int[M][N];
+		for(int i=0; i<M; i++){
+			str = br.readLine().split(" ");
+			for(int j=0; j<N; j++){
+				arr[i][j] = Integer.parseInt(str[j]);
+			}
+		}
+		//입력완료
+		bfs(0,0);
+		int max = 0;
+		for(int i=0; i<M; i++){
+			for(int j=0; j<N; j++){
+				if(arr[i][j]!=1){
+					System.out.println(-1);
+					break;
+				}else{
+					max = Math.max(arr[i][j], max);
+				}
+			}
+		}
+		System.out.println(max);
+	}
+	private static void bfs(int x, int y){
+		Queue<A> q = new LinkedList<A>();
+		
+		for(int i=0; i<M; i++){
+			for(int j=0; j<N; j++){
+				if(arr[i][j] ==1)
+					q.add(new A(i,j));
+			}
+		}
+		
+		while(!q.isEmpty()){
+			A dot = q.poll();
+			for(int i=0; i<4; i++){
+				int nextX = dot.x + dx[i];
+				int nextY = dot.y + dy[i];
+				
+				//범위 밖이면 패스
+				if(nextX <0 || nextY <0 || nextX >=M || nextY >= N){
+					continue;
+				}
+				if(arr[nextX][nextY] != 0){
+					continue;
+				}
+				arr[nextX][nextY] = arr[dot.x][dot.y] + 1;
+				q.add(new A(nextX, nextY));
+			}
+		}
+	}
+}
+
+
+class A{
+	int x;
+	int y;
+	public A(int x, int y) {
+		super();
+		this.x = x;
+		this.y = y;
+	}
+	
+}

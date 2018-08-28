@@ -1,0 +1,47 @@
+package swea;
+
+import java.util.Scanner;
+
+public class q4615 {
+	static int white;
+	static int black;
+	static int dx[] = {-1,-1,0,1,1,1,0,-1};
+	static int dy[] = {0,-1,1,1,0,-1,-1,-1};
+	static int N;
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int T = sc.nextInt();
+		
+		for(int tc=1 ; tc <=T; tc++){
+			N = sc.nextInt();
+			int M = sc.nextInt();
+			int arr[][] = new int[N][N];
+			arr[N/2-1][N/2-1] = arr[N/2 +1][N/2 +1] = 100; //¹é
+			arr[N/2+1][N/2-1] = arr[N/2 -1][N/2 +1] = 99; //Èæ
+			
+			for(int i=0; i<M; i++){
+				int a = sc.nextInt();
+				int b = sc.nextInt();
+				int t = sc.nextInt();
+				solve(a,b,t);
+			}
+			
+			
+		}
+	}
+	private static void solve(int x, int y, int type){
+		int check  = 0;
+		for(int i=0; i<8; i++){
+			int nextX = x + dx[i];
+			int nextY = y + dy[i];
+			
+			//¹üÀ§¸¦ ¹þ¾î³µÀ¸¹Ç·Î ¿À·ù
+			if(nextX < 0 || nextY <  0 || nextX>=N || nextY >=N){
+				break; 
+			}
+			
+		}
+		
+	}
+}

@@ -1,0 +1,14 @@
+package swea;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class q1204 {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		for(int tc = 0; tc<10; tc++){
+			
+			
+		}
+	}
+}

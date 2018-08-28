@@ -1,0 +1,10 @@
+package swea;
+
+import java.util.Scanner;
+
+public class q1285 {
+	public static void main(String[] args) {
+		Scanner sc = new Sanner(System.in)
+				
+	}
+}

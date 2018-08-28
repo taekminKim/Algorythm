@@ -1,0 +1,17 @@
+package swea;
+
+import java.util.Scanner;
+
+public class q4299 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int D = 11;
+		int H = 11;
+		int M = 11;
+		int T = sc.nextInt();
+		for(int tc = 1; tc<=T; tc++){
+			
+			
+		}
+	}
+}

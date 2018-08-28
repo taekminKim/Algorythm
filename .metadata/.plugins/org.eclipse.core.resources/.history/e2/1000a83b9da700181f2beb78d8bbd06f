@@ -1,0 +1,10 @@
+package swea;
+
+public class q4615 {
+	int map[9][9];
+	int n, m;
+	
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,27 @@
+package swea;
+
+import java.util.Scanner;
+
+public class q3750 {
+	static int res;
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int T = sc.nextInt();
+		for (int tc = 1; tc <= T; tc++) {
+			String str = sc.nextLine(); //nÀÔ·Â
+			res = 0;
+			solve(str);
+		}
+	}
+	
+	public static void solve(String str){
+		int l = str.length();
+		int sum = 0;
+		for(int i=0; i<l ; i++){
+			
+		}
+		System.out.println(sum);
+	}
+
+}

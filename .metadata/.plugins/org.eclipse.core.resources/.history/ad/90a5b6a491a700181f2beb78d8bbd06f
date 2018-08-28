@@ -1,0 +1,21 @@
+package swea;
+
+import java.util.Scanner;
+
+public class q4751 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int t = sc.nextInt();
+		
+		for(int tc = 1; tc<= t; tc++){
+			String st = sc.next();
+			if(st.length()==1){
+				int arr[][] = new int[5][5];
+			}else{
+				int arr[][] = new int[5][5*st.length()-st.length()+1];
+			}
+			
+	}
+}
+

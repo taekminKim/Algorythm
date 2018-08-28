@@ -1,0 +1,50 @@
+package swea;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class q3499 {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int T = Integer.parseInt(br.readLine());
+		
+		for(int tc = 1; tc<=T; tc++){
+			int N = Integer.parseInt(br.readLine());
+			
+			String str[] = br.readLine().split(" ");
+			System.out.println(str.length);
+			String a[] = new String[N/2+1];
+			System.out.println(a.length);
+			String b[] = new String[N/2+1];
+			System.out.println(b.length);
+			if(N%2==0){
+				for(int i=0; i<N/2; i++){
+					a[i] = str[i];
+				}
+				for(int j=N/2; j<N; j++){
+					b[j-N/2] = str[j];
+				}
+				System.out.print("#"+tc+" ");
+				for(int i=0; i<N/2; i++){
+					System.out.print(a[i]+" ");
+					System.out.print(b[i]+" ");
+				}
+				System.out.println("");
+			}else{
+				for(int i=0; i<N/2+1; i++){
+					a[i] = str[i];
+				}
+				for(int i=N/2+1; i<N; i++){
+					b[i] = str[i];
+				}
+				System.out.println("#"+tc+" ");
+				for(int i=0; i<N/2; i++){
+					System.out.print(a[i]+" ");
+					System.out.print(b[i]+" ");
+				}
+				System.out.println(a[N/2]);
+			}
+		}
+	}
+}

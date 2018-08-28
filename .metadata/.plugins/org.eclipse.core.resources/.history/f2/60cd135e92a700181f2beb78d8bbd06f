@@ -1,0 +1,23 @@
+package swea;
+
+import java.util.Scanner;
+
+public class q4751 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int t = sc.nextInt();
+		
+		for(int tc = 1; tc<= t; tc++){
+			String st = sc.next();
+			int length = st.length();
+			char arr[][] = new char[3][500];
+			char input[] = new char[55];
+			int i=0;
+			int j =0;
+			arr[0][j++] = ".";
+			
+		}
+	}
+}
+

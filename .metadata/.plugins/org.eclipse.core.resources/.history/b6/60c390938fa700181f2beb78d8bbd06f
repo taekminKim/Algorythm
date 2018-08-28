@@ -1,0 +1,23 @@
+package swea;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+
+public class q4676 {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();
+		StringBuilder sb = new StringBuilder();
+		for(int tc=1; tc <= T; tc++){
+			
+			String word = sc.next();
+			List<Character> list = new ArrayList<>();
+			
+		}
+		
+	}
+}

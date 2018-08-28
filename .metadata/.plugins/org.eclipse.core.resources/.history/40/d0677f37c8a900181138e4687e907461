@@ -1,0 +1,35 @@
+package swea;
+
+import java.util.Scanner;
+
+public class q3750 {
+	static int n;
+	static int res;
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int T = sc.nextInt();
+		for (int tc = 1; tc <= T; tc++) {
+			n = sc.nextInt();
+			res = 0;
+			fn(n);
+			System.out.println("#" + tc + " " + res);
+		}
+	}
+
+	public static void fn(int n) {
+		int sum = 0;
+		int temp =0;
+		while (n > 0) {
+			temp = n % 10;
+			sum += temp;
+			n /= 10;
+		}
+		if(sum<10){
+			res = sum;
+		}else{
+			fn(sum);
+		}
+	}
+}

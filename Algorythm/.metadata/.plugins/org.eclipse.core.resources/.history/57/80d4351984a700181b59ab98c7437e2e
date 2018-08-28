@@ -1,0 +1,111 @@
+package boj;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+public class q14503 {
+	static int arr[][];
+	static int dx[] = {-1, 0, 1, 1};
+	static int dy[] = {0, -1, 0, 1};
+	static boolean visit[][];
+	static Direction dir;
+	static int d;
+	/*
+	 * 북(0)-> 서(3) -> 남(2) -> 동(1) 
+	 * (0,1) -> (-1,0) -> (0,-1) -> (1,0)
+	 */
+	//방향 d는
+	//0 : 북   1: 동
+	//2 : 남   3: 서
+	static int count = 0; //청소할때만 count세줌.
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String str[] = br.readLine().split(" ");
+		int N = Integer.parseInt(str[0]);
+		int M = Integer.parseInt(str[1]);
+		arr = new int[N+1][M+1];
+		visit = new boolean[N+1][M+1];
+		str = br.readLine().split(" ");
+		int r = Integer.parseInt(str[0]);
+		int c = Integer.parseInt(str[1]);
+		d = Integer.parseInt(str[2]); //방향
+		for(int i=0; i<N; i++){
+			str = br.readLine().split(" ");
+			for(int j=0; j<M; j++){
+				arr[i][j] = Integer.parseInt(str[j]);
+			}
+		}
+		dfs(r,c,d);
+		for(int i=0; i<N; i++){
+			for(int j=0; j<M; j++){
+				if(visit[i][j] == true)
+					count++;
+			}
+		}
+		System.out.println(count);
+	}
+	
+	public static void dfs(int r, int c, int d){
+		// 네방향 모두 청소가 이미 되어있거나 벽이면서
+		// 뒤쪽 방향이 벽이라 후진도 할 수 없는경우 작동 중지.
+		Queue<Direction> q = new LinkedList<Direction>();
+		visit[r][c] = true;
+		q.add(new Direction(r,c,d));
+		while(!q.isEmpty()){
+			Direction dir = q.poll();
+			int nowX = dir.x;
+			int nowY = dir.y;
+			int nowDir = dir.dir;
+			boolean flags = false;
+			int nextX;
+			int nextY;
+			int nextDir;
+			for(int i=0; i<4; i++){
+				nowDir = (nowDir + 3) %4;
+				nextX = nowX + dx[nowDir];
+				nextY = nowY + dy[nowDir];
+				
+				Direction nextDot = new Direction(nextX, nextY, nowDir);
+				
+				if(nextX <0 || nextY <0 || nextX >=N || nextY >= M){
+					continue
+				}
+				//다음위치가 청소되지 않은 곳이면 ㄱ
+				if(arr[nextX][nextY] == 0 && visit[nextX][nextY]==false){
+					q.add(nextDot);
+					visit[nextX][nextY] = true;
+					flags = true;
+					break;
+				}
+			}
+			
+			//4방향 모두 청소된경우 후진
+			if(!flags){
+				nextDir = (nowDir + 2) % 4;
+				nextX = nowX + dx[nextDir];
+				nextY = nowY + dy[nextDir];
+				
+				//만약 후진할 곳이 벽이면 종료, 아니면 후진
+				if(arr[nextX][nextY] != 1){
+					visit[nextX][nextY] = true;
+					q.add(new Direction(nextX, nextY, nowDir));
+				}
+			}
+		}
+	}
+	
+	
+}
+class Direction{
+	int x;
+	int y;
+	int dir;
+	public Direction(int x, int y, int dir) {
+		super();
+		this.x = x;
+		this.y = y;
+		this.dir = dir;
+	}
+}

@@ -1,0 +1,16 @@
+package swea;
+
+import java.util.Scanner;
+
+public class q4615 {
+	int map[][] = new int [9][9];
+	int n, m;
+	static int dx[] = { -1,-1,-1,0,1,1, 1, 0 };
+	static int dy[] = { -1, 0, 1,1,1,0,-1,-1 };
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int tc = sc.nextInt();
+		
+	}
+}

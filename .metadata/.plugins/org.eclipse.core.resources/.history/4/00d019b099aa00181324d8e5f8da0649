@@ -1,0 +1,35 @@
+package swea;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class q3282 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();
+		
+		for(int tc = 1; tc <= T; tc++){
+			int n = sc.nextInt();
+			int k = sc.nextInt();
+			ArrayList<Bag> bag = new ArrayList<>();
+			for(int i=0; i<n; i++){
+				bag.add(new Bag(sc.nextInt(), sc.nextInt()));
+			}
+			//ÀÔ·Â³¡.
+			for(int i=0; i<n; i++){
+				
+			}
+		}
+		
+	}
+}
+class Bag{
+	int v;
+	int c;
+	public Bag(int v, int c) {
+		super();
+		this.v = v;
+		this.c = c;
+	}
+	
+}

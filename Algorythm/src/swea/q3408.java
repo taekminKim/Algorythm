@@ -1,0 +1,19 @@
+package swea;
+
+import java.util.Scanner;
+
+public class q3408 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int T = sc.nextInt();
+		
+		for(int tc = 1; tc<=T; tc++){
+			long n = sc.nextLong();
+			long s1 = ((n*n-n)/2)+n;
+			long s2 = n*n;
+			long s3 = n*n + n;
+			System.out.println("#"+tc+" "+s1+" "+s2+" "+s3);
+		}
+	}
+}

@@ -1,0 +1,9 @@
+package swea;
+
+public class q3233 {
+	public static void main(String[] args) {
+		// 1 4 9 16 25
+		//D[i] = D[i-1] + 2i + 1
+		Scanner sc = new Scanner(System.in);
+	}
+}

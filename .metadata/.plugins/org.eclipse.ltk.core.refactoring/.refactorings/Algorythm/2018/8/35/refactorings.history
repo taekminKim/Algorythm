@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;swea.q4047&apos; to &apos;q3499&apos;&#x0D;&#x0A;- Original project: &apos;Algorythm&apos;&#x0D;&#x0A;- Original element: &apos;swea.q4047&apos;&#x0D;&#x0A;- Renamed element: &apos;swea.q3499&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;q4047&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;swea{q4047.java[q4047" matchStrategy="1" name="q3499" qualified="false" references="true" similarDeclarations="false" stamp="1535344520087" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,27 @@
+package swea;
+
+import java.util.Scanner;
+
+public class q3233 {
+	public static void main(String[] args) {
+		// 1 4 9 16 25
+		//D[i] = D[i-1] + 2i + 1
+		Scanner sc = new Scanner(System.in);
+		
+		int T  = sc.nextInt();
+		
+		for(int tc = 1; tc<=T; tc++){
+			int a = sc.nextInt();
+			int b = sc.nextInt();
+			
+			int arr[] = new int[a+1];
+			arr[1] = 1;
+			for(int i=2; i<=a; i++){
+				arr[i] = arr[i-1] + 2*(i-1) +1;
+			}
+			System.out.println(arr[a]);
+			System.out.println(arr[b]);
+			System.out.println("#"+tc+" "+arr[a]/arr[b]);
+		}
+	}
+}

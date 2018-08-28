@@ -1,0 +1,12 @@
+package swea;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class q1940 {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		
+		
+	}
+}
